@@ -125,7 +125,7 @@ def createModel(train_data, val_data, train_labels, val_labels,test_data):
     decoder.save("decoder.h5")
 
     encods = encodeData(std_test_data, encoder)
-    decodeData(encods, decoder)
+    decodeData(encods, decoder, mean, std)
     computeRegression(encods, regression)
 
 def encodeData(test_data, encoder):
@@ -133,8 +133,8 @@ def encodeData(test_data, encoder):
     saveCsv(preds, "encoded")
     return preds
 
-def decodeData(encods, decoder):
-    preds = decoder.predict(encods)
+def decodeData(encods, decoder, mean, std):
+    preds = decoder.predict(encods) * std + mean
     saveCsv(preds, "decoded")
 
 def computeRegression(encods, regression):
