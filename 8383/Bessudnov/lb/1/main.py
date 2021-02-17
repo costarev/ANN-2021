@@ -8,8 +8,11 @@ from tensorflow.keras.utils import plot_model
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 
+from pathlib import Path
+
 ##Загрузка данных
-dataframe = pandas.read_csv("D:\\LETI\\3rd\\ANN-2021\\8383\\Bessudnov\\lb\\1\\iris.csv", header = None)
+path = Path("iris.csv")
+dataframe = pandas.read_csv(path.absolute(), header = None)
 dataset = dataframe.values
 X = dataset[:, 0:4].astype(float)
 Y = dataset[:,4]
@@ -23,8 +26,8 @@ dummy_Y = to_categorical(encoded_Y)
 
 ##Создание модели
 model = Sequential()
-model.add(Dense(16, activation="relu", input_shape=(4,)))
-model.add(Dense(16, activation="relu"))
+model.add(Dense(32, activation="relu", input_shape=(4,)))
+model.add(Dense(32, activation="relu"))
 model.add(Dense(3, activation="softmax"))
 
 ##Установка параметров обучения
