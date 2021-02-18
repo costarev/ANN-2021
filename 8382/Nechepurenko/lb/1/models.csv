@@ -1,0 +1,4 @@
+epochs:100;validation_split:0.2,4:relu;6:relu;3:softmax
+epochs:100;validation_split:0.2;batch_size:5,4:relu;6:relu;3:softmax
+epochs:100;validation_split:0.1;batch_size:5,4:relu;6:relu;3:softmax
+epochs:200;validation_split:0.1;batch_size:10,4:relu;6:relu;3:softmax
