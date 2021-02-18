@@ -25,7 +25,7 @@ model.add(Dense(3, activation='softmax'))
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-history = model.fit(X, dummy_y, epochs=75, batch_size=5, validation_split=0.1)
+history = model.fit(X, dummy_y, epochs=275, batch_size=5, validation_split=0.1)
 #print(history)
 
 
