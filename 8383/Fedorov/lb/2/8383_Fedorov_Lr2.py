@@ -21,10 +21,6 @@ encoder = LabelEncoder()
 encoder.fit(Y)
 encoded_Y = encoder.transform(Y)   #[1, 1, 1, 1, ... , 0 , 0, 0]
 
-
-X_ = X
-encoded_Y_ = encoded_Y
-
 ###### отбор тестовых данных
 test_index = int(len(X)-len(X)*0.2)
 test_data_x = X[test_index:]
@@ -33,20 +29,6 @@ X = X[:test_index]
 test_index = int(len(encoded_Y)-len(encoded_Y)*0.2)
 test_data_y = encoded_Y[test_index:]
 encoded_Y = encoded_Y[:test_index]
-
-
-
-#задание архитектуры
-model = Sequential()
-model.add(Dense(30, input_dim=60, activation='relu'))
-#model.add(Dense(30, input_dim=60, activation='relu'))
-#model.add(Dense(15, activation='relu'))
-#model.add(Dense(15, activation='relu'))
-#model.add(Dense(1, init=’normal’, activation=’sigmoid’)) 
-model.add(Dense(1, activation='sigmoid')) 
-model.compile(optimizer='adam',loss='binary_crossentropy', metrics=['accuracy'])
-
-
 
 # графики потерь и точности при обучении и тестирования
 def plot_model_loss_and_accuracy(history, figsize_=(10,5)):
@@ -80,7 +62,6 @@ def get_model():
     model = Sequential()
     model.add(Dense(60, input_dim=60, activation='relu'))
     model.add(Dense(15, activation='relu'))
-    #model.add(Dense(15, activation='relu'))
     model.add(Dense(1, activation='sigmoid')) 
     model.compile(optimizer='adam',loss='binary_crossentropy', metrics=['accuracy'])
     return model
