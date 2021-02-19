@@ -79,7 +79,7 @@ drawResults(all_data, all_label, pred)
 ```
 
 ## Выполнение работы
-Получившаяся модель имеет сделующий вид:
+Получившаяся модель имеет следующий вид:
 ```python
 model = models.Sequential()
 model.add(layers.Dense(20, activation='relu', input_shape=(2,)))
@@ -102,11 +102,11 @@ H = model.fit(partial_x_train,
 Точность модели составляет 97-99%
 
 График точности модели:  
-![alt text](https://github.com/TxAnton/uni32/raw/ANN_pr2/ANN/prakt/8383/Larin/pr/2/img/Pr2_acc.png)
+![Accuracy plot](https://github.com/TxAnton/uni32/raw/ANN_pr2/ANN/prakt/8383/Larin/pr/2/img/Pr2_acc.png)
   
 График функции потерь модели:  
-![alt text](https://github.com/TxAnton/uni32/raw/ANN_pr2/ANN/prakt/8383/Larin/pr/2/img/Pr2_loss.png)
-
+![Loss plot](https://github.com/TxAnton/uni32/raw/ANN_pr2/ANN/prakt/8383/Larin/pr/2/img/Pr2_loss.png)
+  
 Последняя строка логов:
 ```
 Epoch 100/100  
