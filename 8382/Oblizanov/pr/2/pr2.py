@@ -42,8 +42,8 @@ def drawResults(data, label, prediction):
 (train_data, train_label), (test_data, test_label) = genData()
 
 model = models.Sequential()
-model.add(layers.Dense(16, activation='relu', input_shape=(2,)))
-model.add(layers.Dense(192, activation='relu'))
+model.add(layers.Dense(60, activation='relu', input_shape=(2,)))
+model.add(layers.Dense(60, activation='relu'))
 model.add(layers.Dense(1, activation='sigmoid'))
 
 model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['accuracy'])
