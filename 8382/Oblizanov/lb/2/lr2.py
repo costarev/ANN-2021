@@ -9,7 +9,7 @@ epochs = 100
 
 dataframe = pandas.read_csv("sonar.csv", header=None)
 dataset = dataframe.values
-X = dataset[:, 0:60].astype(float)
+X = dataset[:, 0:30].astype(float)
 Y = dataset[:, 60]
 
 encoder = LabelEncoder()
@@ -17,7 +17,7 @@ encoder.fit(Y)
 encoded_Y = encoder.transform(Y)
 
 model = Sequential()
-model.add(Dense(30, activation='relu'))
+model.add(Dense(60, activation='relu', input_dim=30))
 model.add(Dense(15, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
