@@ -56,7 +56,7 @@ answer = np.array([int(expression(x[0], x[1], x[2])) for x in data])
 
 model = Sequential()
 model.add(Dense(16, activation='relu', input_shape=(3,)))
-model.add(Dense(64, activation='relu'))
+model.add(Dense(32, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 f = open("output.txt", "w")
