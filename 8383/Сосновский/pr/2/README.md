@@ -50,6 +50,7 @@ def genData(size=500):
 ![](https://cdn1.savepice.ru/uploads/2021/2/25/8abf5a79a230b1856957a911ed801c61-full.png)
 
 График результатов бинарной классификации:
+
 ![](https://cdn1.savepice.ru/uploads/2021/2/25/b2fcfad25b2ee77570a68ed95e1e4803-full.png)
 
 Полученная точность нейросети равна 0.9800000095367432
