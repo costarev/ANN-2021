@@ -27,12 +27,13 @@ def f(x):
 
 # ### Пример выполнения
 
-# In[3]:
+# In[4]:
 
 
-m = np.random.randint(-4,4,size=(10,10))
+#m = np.random.randint(-4,4,size=(10,10))
+m = np.loadtxt("v9.txt")
 print(m)
-f(m)
+np.savetxt("v9_result.txt",f(m))
 
 
 # In[ ]:
