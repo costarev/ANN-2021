@@ -24,9 +24,9 @@
 
 ### Графики
 
-![1](/home/dmitry/Documents/Programming/ANN-2021/8382/shchemel/pr/2/1.png?raw=true)
+![1](8382/shchemel/pr/2/1.png)
 
-![2](/home/dmitry/Documents/Programming/ANN-2021/8382/shchemel/pr/2/2.png?raw=true)
+![2](8382/shchemel/pr/2/2.png)
 
-![3](/home/dmitry/Documents/Programming/ANN-2021/8382/shchemel/pr/2/3.png?raw=true)
+![3](8382/shchemel/pr/2/3.png)
 
