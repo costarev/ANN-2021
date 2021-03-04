@@ -14,8 +14,8 @@ encoder.fit(Y)
 encoded_Y = encoder.transform(Y)
 
 model = Sequential()
-model.add(Dense(60, input_dim=30, activation='relu'))
-model.add(Dense(15, activation='relu'))
+model.add(Dense(60, input_dim=30, kernel_initializer='normal', activation='relu'))
+model.add(Dense(15, kernel_initializer='normal', activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
