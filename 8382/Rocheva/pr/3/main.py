@@ -3,19 +3,13 @@ import matplotlib.pyplot as plt
 
 
 def get_tensor(radius, color):
-    t = []
+    tensor = np.zeros((radius*2, radius*2, 3), dtype='int')
+
     for x in range(0, radius*2):
-        row = []
         for y in range(0, radius*2):
             if abs((x - radius) ** 2 + (y - radius) ** 2) <= radius ** 2:
-                row.append(color)
-            else:
-                row.append([0, 0, 0])
-        t.append(row)
+                tensor[x][y] = color
 
-    # print(type(t))
-    tensor = np.array(t)
-    # print(tensor.ndim, type(tensor))
     return tensor
 
 
