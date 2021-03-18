@@ -26,7 +26,7 @@ def build_model():
     return model
 
 
-k = 3
+k = 6
 num_val_samples = len(train_data) // k
 num_epochs = 40
 all_scores = []
@@ -46,6 +46,8 @@ for i in range(k):
                         validation_data=(val_data, val_targets), verbose=2)
     mae = history.history['mae']
     val_mae = history.history['val_mae']
+    mse = history.history['loss']
+    val_mse = history.history['val_loss']
     x = range(1, num_epochs + 1)
     all_scores.append(val_mae)
     plt.figure(i)
@@ -54,6 +56,14 @@ for i in range(k):
     plt.xlabel('Epochs')
     plt.ylabel('Absolute error')
     plt.title('Absolute error')
+    plt.legend()
+    plt.grid()
+    plt.figure(k + i + 1)
+    plt.plot(x, mse, 'r', label='Training MSE')
+    plt.plot(x, val_mse, 'g', label='Validation MSE')
+    plt.xlabel('Epochs')
+    plt.ylabel('MSE')
+    plt.title('MSE')
     plt.legend()
     plt.grid()
 
