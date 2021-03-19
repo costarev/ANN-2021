@@ -44,6 +44,8 @@ for i in range(k):
     model = build_model()
     history = model.fit(partial_train_data, partial_train_target, epochs=num_epochs, batch_size=1,
                         validation_data=(val_data, val_targets), verbose=2)
+    res_mse, res_mae = model.evaluate(test_data, test_targets)
+    print(res_mae)
     mae = history.history['mae']
     val_mae = history.history['val_mae']
     mse = history.history['loss']
